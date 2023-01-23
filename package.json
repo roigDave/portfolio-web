@@ -1,0 +1,15 @@
+{
+  "name": "portfolio_web",
+  "version": "1.0.0",
+  "description": "Dave's little portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Here is test\"",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Dave Roig",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
