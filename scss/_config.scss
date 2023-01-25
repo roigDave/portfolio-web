@@ -17,7 +17,7 @@ $background-opacity: 0.3;
 
             &:after {
                 content:'';
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
                 width: 100%;
@@ -29,6 +29,16 @@ $background-opacity: 0.3;
     }
 }
 
+// Adaptative text colour
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+      @return #fff;
+    }
+}
+
+// Media queries
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;
