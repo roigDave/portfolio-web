@@ -118,6 +118,41 @@ main {
 
 
 }
+
+.projects {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+
+    img {
+        width:100%;
+        max-height: 30rem;
+        border: #fff;
+        border-style:solid;
+        opacity: 0.8;
+
+        &:hover {
+            transform: scale(1.03);
+            opacity: 1;
+            border-color: rgba($secondary-color,0.5);
+            @include easeOut(0.5s);
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        @include easeOut(0.2s);
+    }
+}
+
 #main-footer {
     text-align: center;
     padding: 0.2rem;
