@@ -167,7 +167,8 @@ main {
 .about-info {
   display: grid;
   grid-template-areas: 'bioimage bioimage bio bio bio bio' 'job1 job1 job1 job2 job2 job2';
-  grid-template-columns: repeat(6, 1fr); }
+  grid-template-columns: repeat(6, 1fr);
+  text-indent: 2rem; }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -215,31 +216,56 @@ main {
     color: #000;
     transition: all 0.2s ease-out; }
 
-.boxes {
-  display: flex;
+.contact {
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem; }
-    .boxes div:hover {
-      padding: 1.25rem 2.25rem;
-      background: #a25757;
+  margin-top: 1rem;
+  padding: 1rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  orientation: portrait;
+  gap: 10px;
+  align-items: flex-start; }
+  .contact div {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0px 10px 0px 10px; }
+    .contact div:hover {
       color: #000;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 0px 12px 0px 12px;
       transition: all 0.5s ease-out; }
-      .boxes div:hover span {
+      .contact div:hover span {
         color: #000; }
 
-#main-footer {
+#main-footer, #contact-footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
   padding: 0.2rem;
   background: rgba(43, 43, 43, 0.5);
   color: #fff;
   height: 30px; }
+  #main-footer .footer-icons, #contact-footer .footer-icons {
+    position: absolute;
+    right: 0;
+    height: 30px;
+    bottom: 33px; }
+    #main-footer .footer-icons a, #contact-footer .footer-icons a {
+      margin-right: 5px;
+      transition: all 0.5s ease-out; }
+      #main-footer .footer-icons a:hover, #contact-footer .footer-icons a:hover {
+        color: #a25757; }
+
+#main-footer {
+  position: sticky;
+  margin-top: 30px;
+  margin-left: -4rem;
+  margin-right: -4rem; }
+
+#contact-footer {
+  position: absolute; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -282,6 +308,80 @@ main {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
+  #bg-img {
+    background-position: center; }
+  main {
+    padding: 2rem 2rem 0rem; }
   main#home h1 {
-    font-size: 78px;
-    margin-top: 10vh; } }
+    font-size: 50px;
+    margin-top: 10vh;
+    text-align: center; }
+  main#home h2 {
+    font-size: 17px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 0%;
+    text-align: center; }
+  main#home .icons {
+    padding-top: 7vh;
+    margin: auto;
+    width: 30%; }
+    main#home .icons i {
+      scale: 1; }
+  main#about h1 {
+    font-size: 50px;
+    margin-top: 10vh;
+    text-align: center; }
+  main#about h2 {
+    font-size: 17px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 0%;
+    text-align: center; }
+  main#about .about-info {
+    margin-top: 12vh; }
+    main#about .about-info .bio {
+      margin-top: 30px;
+      padding: 0.25rem; }
+      main#about .about-info .bio h3 {
+        font-size: 40px;
+        line-height: 40px; }
+    main#about .about-info .job {
+      padding: 0.35rem; }
+  main#contact h1 {
+    font-size: 50px;
+    margin-top: 10vh;
+    text-align: center; }
+  main#contact h2 {
+    font-size: 17px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 0%;
+    text-align: center; }
+  main#contact .contact {
+    position: absolute;
+    margin-top: 5rem;
+    padding-left: 0;
+    padding-top: 5rem; }
+    main#contact .contact div {
+      font-size: 20px;
+      padding-top: 5px; }
+  main#work h1 {
+    font-size: 50px;
+    margin-top: 10vh;
+    text-align: center; }
+  main#work h2 {
+    font-size: 17px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 0%;
+    text-align: center; }
+  main#work .projects {
+    padding-top: 3vh; }
+  #main-footer {
+    margin-left: -2rem;
+    margin-right: -2rem; } }

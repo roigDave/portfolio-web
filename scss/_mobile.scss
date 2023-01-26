@@ -75,8 +75,125 @@
 // Smartphone
 @include mediaSm {
 
-    main#home h1 {
-        font-size: 78px;
-        margin-top: 10vh;
+    &#bg-img {
+        background-position: center;
     }
+    main {
+    padding: 2rem 2rem 0rem;
+    }
+
+
+    main#home {
+        h1 {
+            font-size: 50px;
+            margin-top: 10vh;
+            text-align: center;
+        }
+        h2 {
+            font-size: 17px ;
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding-bottom: 0%;
+            text-align: center;
+
+        }
+        .icons {
+            padding-top: 7vh;
+            margin:auto;
+            width:30%;
+            i {
+                scale: 1;
+            }
+        }
+
+    }
+
+    main#about {
+        h1 {
+            font-size: 50px;
+            margin-top: 10vh;
+            text-align: center;
+        }
+        h2 {
+            font-size: 17px ;
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding-bottom: 0%;
+            text-align: center;
+        }
+
+        .about-info {
+            margin-top: 12vh;
+            .bio {
+                margin-top: 30px;
+                h3 {
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+                padding: 0.25rem;
+            }
+            .job {
+                padding: 0.35rem;
+
+            }
+
+        }
+    }
+
+    main#contact {
+        h1 {
+            font-size: 50px;
+            margin-top: 10vh;
+            text-align: center;
+        }
+        h2 {
+            font-size: 17px ;
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding-bottom: 0%;
+            text-align: center;
+
+        }
+
+        .contact {
+            position: absolute;
+            margin-top: 5rem;
+            padding-left: 0;
+            padding-top: 5rem;
+            div{
+            font-size: 20px;
+            padding-top: 5px;
+            }
+        }
+    }
+
+    main#work {
+        h1 {
+            font-size: 50px;
+            margin-top: 10vh;
+            text-align: center;
+        }
+        h2 {
+            font-size: 17px ;
+            position: absolute;
+            left: 0;
+            right: 0;
+            padding-bottom: 0%;
+            text-align: center;
+        }
+
+        .projects {
+            padding-top: 3vh;
+        }
+
+    }
+
+    #main-footer {
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+
 }
