@@ -152,13 +152,6 @@ header {
 main {
   padding: 4rem 4rem 0rem;
   min-height: calc(100vh-30px); }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem;
-      transition: all 0.5s ease-out; }
-      main .icons a:hover {
-        color: #a25757; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -166,7 +159,8 @@ main {
 
 .about-info {
   display: grid;
-  grid-template-areas: 'bioimage bioimage bio bio bio bio' 'job1 job1 job1 job2 job2 job2';
+  grid-template-areas: 'bioimage bioimage bio bio bio bio'
+ 'job1 job1 job1 job2 job2 job2';
   grid-template-columns: repeat(6, 1fr);
   text-indent: 2rem; }
   .about-info .bio-image {
@@ -238,7 +232,7 @@ main {
       .contact div:hover span {
         color: #000; }
 
-#main-footer, #contact-footer {
+#sticky-footer, #static-footer {
   bottom: 0;
   left: 0;
   right: 0;
@@ -247,24 +241,24 @@ main {
   background: rgba(43, 43, 43, 0.5);
   color: #fff;
   height: 30px; }
-  #main-footer .footer-icons, #contact-footer .footer-icons {
+  #sticky-footer .footer-icons, #static-footer .footer-icons {
     position: absolute;
     right: 0;
     height: 30px;
     bottom: 33px; }
-    #main-footer .footer-icons a, #contact-footer .footer-icons a {
+    #sticky-footer .footer-icons a, #static-footer .footer-icons a {
       margin-right: 5px;
       transition: all 0.5s ease-out; }
-      #main-footer .footer-icons a:hover, #contact-footer .footer-icons a:hover {
+      #sticky-footer .footer-icons a:hover, #static-footer .footer-icons a:hover {
         color: #a25757; }
 
-#main-footer {
+#sticky-footer {
   position: sticky;
   margin-top: 30px;
   margin-left: -4rem;
   margin-right: -4rem; }
 
-#contact-footer {
+#static-footer {
   position: absolute; }
 
 @media screen and (max-width: 768px) {
@@ -302,7 +296,10 @@ main {
       background-repeat: no-repeat;
       background-position: center; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2';
+    grid-template-areas: 'bioimage'
+ 'bio'
+ 'job1'
+ 'job2';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: 1fr; } }
@@ -323,12 +320,6 @@ main {
     right: 0;
     padding-bottom: 0%;
     text-align: center; }
-  main#home .icons {
-    padding-top: 7vh;
-    margin: auto;
-    width: 30%; }
-    main#home .icons i {
-      scale: 1; }
   main#about h1 {
     font-size: 50px;
     margin-top: 10vh;
@@ -382,6 +373,6 @@ main {
     text-align: center; }
   main#work .projects {
     padding-top: 3vh; }
-  #main-footer {
+  #sticky-footer {
     margin-left: -2rem;
     margin-right: -2rem; } }

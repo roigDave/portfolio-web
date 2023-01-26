@@ -55,20 +55,6 @@ main {
     //height: 100%;
     min-height: calc(100vh-30px);
 
-    .icons {
-        margin-top: 1rem;
-
-
-        a {
-            padding: 0.4rem;
-            @include easeOut(0.5s);
-
-            &:hover {
-                color: $secondary-color;
-            }
-        }
-    }
-
     &#home {
         overflow: hidden;
         h1 {
@@ -185,7 +171,7 @@ main {
 }
 
 
-#main-footer, #contact-footer {
+#sticky-footer, #static-footer {
     bottom: 0;
     left: 0;
     right: 0;
@@ -212,14 +198,14 @@ main {
     }
 }
 
-#main-footer {
+#sticky-footer {
     position: sticky;
     margin-top: 30px;
     margin-left: -4rem;
     margin-right: -4rem;
 }
 
-#contact-footer {
+#static-footer {
     position: absolute;
 }
 
