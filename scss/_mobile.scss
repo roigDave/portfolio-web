@@ -79,6 +79,13 @@
 // Smartphone
 @include mediaSm {
 
+h1, h2, h3 {
+    &.sm-heading {
+
+        background: rgba(#000,0.5);
+    }
+}
+
     &#bg-img {
         background-position: center;
     }
@@ -176,6 +183,15 @@
                     float: center;
                     margin-left: -4.2666666667vw;
                     margin-right: -4.2666666667vw;
+                }
+
+                .job-title {
+                    float:none
+                }
+
+                .bio-text {
+                    margin-top: 7px;
+                    margin-bottom: 30px;
                 }
             }
 
