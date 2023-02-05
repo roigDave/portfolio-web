@@ -79,6 +79,10 @@
 // Smartphone
 @include mediaSm {
 
+    body#bg-img {
+        background-position: -80px;
+    }
+
 h1, h2, h3 {
     &.sm-heading {
 
@@ -86,9 +90,6 @@ h1, h2, h3 {
     }
 }
 
-    &#bg-img {
-        background-position: center;
-    }
     main {
     padding: 2rem 2rem 0rem;
     }
