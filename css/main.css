@@ -366,10 +366,10 @@ main#about .about-info {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
+  body#bg-img {
+    background-position: -80px; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     background: rgba(0, 0, 0, 0.5); }
-  #bg-img {
-    background-position: center; }
   main {
     padding: 2rem 2rem 0rem; }
   main#home h1 {
