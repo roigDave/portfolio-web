@@ -1,6 +1,7 @@
 .menu-btn {
   position: absolute;
   z-index: 3;
+  float: right;
   right: 35px;
   top: 35px;
   cursor: pointer;
@@ -20,6 +21,9 @@
     transition: all 0.2s ease-in-out; }
   .menu-btn.close .btn-line:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -7.5px); }
+
+main#about .menu-btn, main#work .menu-btn, main#contact .menu-btn {
+  position: sticky; }
 
 .menu {
   position: fixed;
@@ -108,7 +112,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: fantasy;
+  font-family: "Gill Sans", sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/temporary_sea_bg.jpg);
@@ -149,6 +153,12 @@ header {
 .text-secondary {
   color: #a25757; }
 
+.text-important {
+  font-weight: 900;
+  font-style: oblique;
+  color: #a25757;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6); }
+
 main {
   padding: 4rem 4rem 0rem;
   min-height: calc(100vh-30px); }
@@ -157,32 +167,94 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
-.about-info {
+main#about .about-info {
   display: grid;
-  grid-template-areas: 'bioimage bioimage bio bio bio bio'
- 'job1 job1 job1 job2 job2 job2';
-  grid-template-columns: repeat(6, 1fr);
-  text-indent: 2rem; }
-  .about-info .bio-image {
+  grid-template-areas: 'bioimage bioimage bio bio bio bio' 'education education education education education education' 'job job job job job job' 'job1 job1 job1 job2 job2 job2';
+  grid-template-columns: repeat(6, 1fr); }
+  main#about .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
     border: #a25757 3px solid;
     gap: 1.5re; }
-  .about-info .bio {
+  main#about .about-info .bio {
     grid-area: bio;
     font-size: 1.4rem;
     padding: 1.5rem; }
-  .about-info .job {
-    background-clip: content-box;
+  main#about .about-info .job {
+    grid-area: job;
     padding: 1rem;
+    gap: 1rem; }
+    main#about .about-info .job .bio-title {
+      margin-left: -5rem;
+      margin-right: -5rem; }
+    main#about .about-info .job .job-title {
+      display: block;
+      width: fit-content;
+      float: left;
+      padding-right: 20px;
+      padding-bottom: 6px; }
+      main#about .about-info .job .job-title h3 {
+        font-size: 40px; }
+      main#about .about-info .job .job-title h6 {
+        font-size: 15px;
+        text-align: right;
+        margin: 0;
+        margin-top: -12px;
+        border-top: #000;
+        border-top-width: 3px;
+        border-top-style: solid; }
+  main#about .about-info .job-1 {
+    grid-area: job1;
+    border-top: #a25757 5px solid; }
+  main#about .about-info .job-2 {
+    grid-area: job2;
+    border-top: #a25757 5px solid; }
+  main#about .about-info .bio-text {
+    word-wrap: break-word;
+    font-size: 20px; }
+  main#about .about-info .education {
+    background-clip: content-box;
     gap: 1rem;
-    border-top: #a25757 5px solid;
-    text-align: justify; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
+    grid-area: education;
+    /*
+        .bio-bg {
+            height: 200px;
+            width: 100%;
+            background-image: url('../img/UAM.jpg');
+            background-repeat: repeat;
+            background-blend-mode: lighten;
+        }
+        */ }
+    main#about .about-info .education h3 {
+      font-size: 30px;
+      text-align: left;
+      text-indent: 0;
+      padding-top: 1rem; }
+    main#about .about-info .education .bio-title {
+      margin-left: -4rem;
+      margin-right: -4rem; }
+  main#about .about-info .bio-title {
+    position: sticky;
+    top: 0;
+    border-top: rgba(255, 255, 255, 0.5) 2px solid;
+    border-bottom: rgba(255, 255, 255, 0.5) 2px solid;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: rgba(73, 73, 73, 0.5); }
+    main#about .about-info .bio-title .flourish {
+      display: inline;
+      vertical-align: middle;
+      width: 60px; }
+    main#about .about-info .bio-title h1 {
+      font-size: 30px;
+      display: inline;
+      vertical-align: middle;
+      text-indent: 0%;
+      text-align: center;
+      font-family: "Gill Sans"; }
 
 .projects {
   display: grid;
@@ -296,10 +368,7 @@ main {
       background-repeat: no-repeat;
       background-position: center; }
   .about-info {
-    grid-template-areas: 'bioimage'
- 'bio'
- 'job1'
- 'job2';
+    grid-template-areas: 'bioimage' 'bio' 'education' 'job1' 'job2';
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: 1fr; } }
@@ -320,27 +389,57 @@ main {
     right: 0;
     padding-bottom: 0%;
     text-align: center; }
-  main#about h1 {
-    font-size: 50px;
-    margin-top: 10vh;
-    text-align: center; }
-  main#about h2 {
-    font-size: 17px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding-bottom: 0%;
-    text-align: center; }
-  main#about .about-info {
-    margin-top: 12vh; }
-    main#about .about-info .bio {
-      margin-top: 30px;
-      padding: 0.25rem; }
-      main#about .about-info .bio h3 {
-        font-size: 40px;
-        line-height: 40px; }
-    main#about .about-info .job {
-      padding: 0.35rem; }
+  main#about {
+    padding-left: 4.2666666667vw;
+    padding-right: 4.2666666667vw; }
+    main#about .bio-text {
+      font-size: 20px;
+      line-height: 32px; }
+    main#about h1 {
+      font-size: 50px;
+      margin-top: 10vh;
+      text-align: center; }
+    main#about h2 {
+      font-size: 17px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding-bottom: 0%;
+      text-align: center; }
+    main#about .about-info {
+      margin-top: 12vh;
+      grid-template-areas: 'bioimage' 'bio' 'education' 'job    ' 'job1' 'job2';
+      grid-template-columns: 1fr; }
+      main#about .about-info .bio {
+        margin-top: 30px;
+        padding: 0rem; }
+        main#about .about-info .bio h3 {
+          font-size: 40px;
+          line-height: 40px; }
+      main#about .about-info .education {
+        display: inline;
+        padding-left: 0; }
+        main#about .about-info .education .bio-title {
+          margin: auto;
+          float: center;
+          margin-left: -4.2666666667vw;
+          margin-right: -4.2666666667vw; }
+        main#about .about-info .education h1 {
+          font-size: 30px; }
+        main#about .about-info .education h3 {
+          text-indent: 1rem;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+          padding-top: 20px; }
+      main#about .about-info .job {
+        padding: 0;
+        padding-top: 0.34rem; }
+        main#about .about-info .job .bio-title {
+          margin: auto;
+          float: center;
+          margin-left: -4.2666666667vw;
+          margin-right: -4.2666666667vw; }
   main#contact h1 {
     font-size: 50px;
     margin-top: 10vh;
@@ -375,4 +474,4 @@ main {
     padding-top: 3vh; }
   #sticky-footer {
     margin-left: -2rem;
-    margin-right: -2rem; } }
+    margin-right: -0.9rem; } }
