@@ -1,7 +1,8 @@
 .menu-btn {
 
-    position: absolute;
+    position:absolute;
     z-index: 3;
+    float: right;
     right: 35px;
     top: 35px;
     cursor: pointer;
@@ -19,6 +20,7 @@
         @include easeOut(0.5s);
     }
 
+
     // Rotation of the menu
     &.close {
 
@@ -34,6 +36,15 @@
                 transform: rotate(-45deg) translate(5px, -7.5px);
                         }
         }
+    }
+}
+
+main#about, main#work, main#contact {
+
+
+    .menu-btn {
+        position: sticky;
+
     }
 }
 

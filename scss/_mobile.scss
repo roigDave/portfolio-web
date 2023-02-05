@@ -61,10 +61,14 @@
             grid-template-areas:
             'bioimage'
             'bio'
+            'education'
             'job1'
             'job2';
             grid-template-columns: 1fr;
-    }
+
+        }
+
+
 
     .projects {
         grid-template-columns: 1fr;
@@ -103,6 +107,13 @@
     }
 
     main#about {
+        padding-left: 4.2666666667vw;
+        padding-right: 4.2666666667vw;
+
+        .bio-text {
+        font-size: 20px;
+        line-height: 32px;
+        }
         h1 {
             font-size: 50px;
             margin-top: 10vh;
@@ -119,18 +130,55 @@
 
         .about-info {
             margin-top: 12vh;
+            grid-template-areas:
+            'bioimage'
+            'bio'
+            'education'
+            'job    '
+            'job1'
+            'job2';
+            grid-template-columns: 1fr;
             .bio {
                 margin-top: 30px;
                 h3 {
                     font-size: 40px;
                     line-height: 40px;
                 }
-                padding: 0.25rem;
+                padding: 0rem;
+            }
+
+            .education {
+                display: inline;
+                padding-left: 0;
+                .bio-title {
+                    margin: auto;
+                    float: center;
+                    margin-left: -4.2666666667vw;
+                    margin-right: -4.2666666667vw;
+                }
+
+                h1 {
+                    font-size: 30px;
+                }
+                h3 {
+                    text-indent: 1rem;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 32px   ;
+                    padding-top: 20px;
+                }
             }
             .job {
-                padding: 0.35rem;
-
+                padding: 0;
+                padding-top: 0.34rem;
+                .bio-title {
+                    margin: auto;
+                    float: center;
+                    margin-left: -4.2666666667vw;
+                    margin-right: -4.2666666667vw;
+                }
             }
+
 
         }
     }
@@ -178,6 +226,7 @@
             text-align: center;
         }
 
+
         .projects {
             padding-top: 3vh;
         }
@@ -186,7 +235,7 @@
 
     #sticky-footer {
         margin-left: -2rem;
-        margin-right: -2rem;
+        margin-right: -0.9rem;
     }
 
 }
