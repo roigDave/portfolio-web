@@ -197,6 +197,33 @@ h1, h2, h3 {
             }
 
 
+            .job-1 {
+                .about-img.signspain {
+                    overflow: hidden;
+                    margin-left: -4rem;
+                    margin-right: -1rem;
+                    img {
+                        opacity: 100%;
+                        width: 105%;
+                        float: none;
+                    }
+                }
+            }
+            .job-2 {
+                .about-img.gfi {
+                    overflow: hidden;
+                    margin-left: -4rem;
+                    margin-right: -1rem;
+                    img {
+                        opacity: 100%;
+                        width: 105%;
+                        float: none;
+                    }
+                }
+            }
+
+
+
         }
     }
 
