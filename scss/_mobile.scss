@@ -175,6 +175,39 @@ h1, h2, h3 {
                     line-height: 32px   ;
                     padding-top: 20px;
                 }
+
+                .about-img.uam {
+                    overflow: hidden;
+                    margin-left: -4rem;
+                    margin-right: -1rem;
+                    margin-top: -1rem;
+                    margin-bottom: -2rem;
+                    img {
+                        box-shadow: none;
+                        opacity: 100%;
+                        width: 105%;
+                        height: 200px;
+                        object-position:center;
+                        object-fit: cover;
+                        float: none;
+                    }
+                }
+                .about-img.egibide {
+                    overflow: hidden;
+                    margin-left: -4rem;
+                    margin-right: -1rem;
+                    margin-top: -1rem;
+                    margin-bottom: -2rem;
+                    img {
+                        box-shadow: none;
+                        opacity: 100%;
+                        width: 105%;
+                        height: 200px;
+                        object-position:top;
+                        object-fit: cover;
+                        float: none;
+                    }
+                }
             }
             .job {
                 padding: 0;
@@ -206,6 +239,10 @@ h1, h2, h3 {
                         opacity: 100%;
                         width: 105%;
                         float: none;
+                        box-shadow: none;
+                        height: 200px;
+                        object-position:top;
+                        object-fit: cover;
                     }
                 }
             }
@@ -218,6 +255,10 @@ h1, h2, h3 {
                         opacity: 100%;
                         width: 105%;
                         float: none;
+                        box-shadow: none;
+                        height: 200px;
+                        object-position:top;
+                        object-fit: cover;
                     }
                 }
             }
@@ -241,6 +282,10 @@ h1, h2, h3 {
             padding-bottom: 0%;
             text-align: center;
 
+        }
+
+        .contact-img {
+            visibility: hidden;
         }
 
         .contact {

@@ -138,18 +138,7 @@ main#about {
 
 
     }
-    .about-img {
-        img {
-        opacity: 0.7;
-        margin: 20px;
-        box-shadow: 0px 0px 10px 3px rgba($secondary-color,0.5);
-        z-index: 10;
-        &:hover {
-            transform: scale(1.03);
-            opacity: 1;
-            @include easeOut(0.5s);
-        }
-    }
+
     }
 
     .job-1 {
@@ -157,10 +146,17 @@ main#about {
         grid-area: job1;
         .about-img.signspain {
             img {
+            box-shadow: 10px 10px 0px 3px rgba($secondary-color,1);
             float: right;
             width: 35%;
+            &:hover {
+                transform: scale(1.03);
+                opacity: 1;
+                box-shadow: 5px 5px 10px 5px rgba($secondary-color,1);
+                @include easeOut(0.5s);
             }
             }
+        }
     }
 
     .job-2 {
@@ -168,8 +164,15 @@ main#about {
         grid-area: job2;
         .about-img.gfi {
             img {
+            box-shadow: 10px -10px 0px 3px rgba($secondary-color,1);
             float: right;
             width: 35%;
+            &:hover {
+                transform: scale(1.03);
+                opacity: 1;
+                box-shadow: 5px -5px 10px 5px rgba($secondary-color,1);
+                @include easeOut(0.5s);
+            }
             }
             }
     }
@@ -182,8 +185,6 @@ main#about {
         a{
             color: $secondary-color;
         }
-
-
     }
 
     .education {
@@ -204,6 +205,36 @@ main#about {
 
             margin-left: -4rem;
             margin-right: -4rem;
+        }
+
+        .about-img.uam {
+            img {
+            box-shadow: -10px 10px 0px 3px rgba($secondary-color,1);
+            float: right;
+            margin-right: 0;
+            width: 25%;
+            &:hover {
+                transform: scale(1.03);
+                opacity: 1;
+                box-shadow: -5px 5px 10px 5px rgba($secondary-color,1);
+                @include easeOut(0.5s);
+            }
+            }
+        }
+        .about-img.egibide {
+            img {
+            box-shadow: 10px 10px 0px 3px rgba($secondary-color,1);
+            float: left;
+            margin-left: 0;
+            margin-top: 10px;
+            width: 25%;
+            &:hover {
+                transform: scale(1.03);
+                opacity: 1;
+                box-shadow: 5px 5px 10px 5px rgba($secondary-color,1);
+                @include easeOut(0.5s);
+            }
+            }
         }
 
     }
@@ -232,6 +263,13 @@ main#about {
             text-align: center;
             font-family: "Gill Sans";
         }
+    }
+    .about-img {
+        img {
+        opacity: 0.7;
+        margin: 20px;
+        z-index: 10;
+
     }
 
 }
@@ -273,6 +311,20 @@ main#about {
     }
 }
 
+
+.contact-img {
+    img {
+        width: 90%;
+        height: 50%;
+        object-fit: cover;
+        position:absolute;
+        z-index: -5;
+        opacity: 0.3;
+        overflow:hidden;
+        transform: scaleX(-1);
+    }
+}
+
 .contact {
     flex-wrap: wrap;
     margin-top: 1rem;
@@ -281,11 +333,13 @@ main#about {
     display:flex;
     flex-direction: column;
     orientation:portrait;
-    gap: 10px;
+    gap: 15px;
     align-items: flex-start;
 
+
+
     div {
-        font-size: 20px;
+        font-size: 25px;
         background-color: rgba(#000,0.05);
         padding: 0px 10px 0px 10px;
 
@@ -296,6 +350,7 @@ main#about {
             span {
                 color: set-text-color($secondary-color);
             }
+            box-shadow: 6px 6px 1px 4px rgba(#000,0.5);
             @include easeOut(0.5s);
 
         }
