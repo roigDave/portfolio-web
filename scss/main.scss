@@ -271,44 +271,66 @@ main#about {
         z-index: 10;
 
     }
-
-}
-
-
+    }
 }
 
 .projects {
     display: grid;
     grid-gap: 20px;
+    row-gap: 80px;
+    padding-bottom: 100px;
+    margin-top: 100px;
     grid-template-columns: repeat(3,1fr);
-
-    img {
-        width:100%;
-        max-height: 30rem;
-        border: #ffd7ac;
-        border-style:solid;
-        opacity: 0.8;
-
+    .item {
+        img {
+            height: 300px;
+            object-position:top;
+            object-fit: cover;
+            width:100%;
+            max-height: 30rem;
+            border: #ffd7ac;
+            border-style:solid;
+            opacity: 0.8;
+        }
         &:hover {
+            img {
             transform: scale(1.03);
             opacity: 1;
             border-color: rgba($secondary-color,0.5);
             @include easeOut(0.5s);
+            }
+            .btn {
+
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            box-shadow: 0 10px 10px 10px rgba(#000,0.5);
+            @include easeOut(1s);
+            .moreinfo {
+                visibility: visible;
+                display: block;
+            }
+        }
+        @include easeOut(0.5s);
+
         }
     }
 }
-
+.btn-parent {
+    position: relative;
+    width: 100%;
+}
 .btn {
+    .moreinfo {
+        visibility: hidden;
+        display: none;
+    }
+    position: absolute;
+    top: 0;
+    z-index: 1;
     display: inline-block;
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
-
-    &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-        @include easeOut(0.2s);
-    }
 }
 
 
